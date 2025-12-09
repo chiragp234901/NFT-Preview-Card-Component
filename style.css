@@ -1,0 +1,221 @@
+
+:root{
+    --Blue500: hsl(215, 51%, 70%);
+    --Cyan400: hsl(178, 100%, 50%);
+    --Blue950: hsl(217, 54%, 11%);
+    --Blue900: hsl(216, 50%, 16%);
+    --Blue800: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: 'myCustomFont';
+  src:url('Outfit-VariableFont_wght.ttf');
+}
+
+body{
+    background-color: var(--Blue950);
+}
+
+main{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.shadowBox{
+    box-shadow: 0px 22px 0px 18px hsla(215, 54%, 7%, 0.212), 0px 20px 0px 50px hsla(214, 51%, 8%, 0.205);
+    border-radius: 15px;
+    width:20em;
+    padding: 2em;
+    background-color: var(--Blue900);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Cyan400);
+    border-radius: 12px;
+}
+
+.cubeImage{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    opacity: 1;
+    display: block;
+    backface-visibility: hidden;
+}
+
+.middle {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: hsl(178, 100%, 50%);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.eyeIconImage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.container:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.container:hover .middle{
+  opacity: 1;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  cursor: pointer;
+}
+
+.container:hover .middle .eyeIconImage{
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+
+.equilibriumHeading{
+    font-family: 'myCustomFont';
+    font-size: 1.4em;
+    color: var(--White);
+    font-weight: 600;
+}
+
+.equilibriumHeading:hover{
+    color: var(--Cyan400);
+    cursor: pointer;
+}
+
+.equilibriumInfo{
+    font-family: 'myCustomFont';
+    font-size: 18px;
+    color: var(--Blue500);
+    font-weight: 300;
+}
+
+.ethereumContent{
+    display: grid;
+    grid-template-columns: 0.25fr 4fr 2fr 2fr;
+    grid-template-rows: 1em;
+}
+
+.ethereumIcon{
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+.ethereum{
+    grid-row-start: 1;
+    grid-column-start: 2;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    padding-left: 5%;
+    font-size: 16px;
+    font-family: 'myCustomFont';
+    color:var(--Cyan400);
+}
+
+.clockIcon{
+    grid-row-start: 1;
+    grid-column-start: 3;
+    align-self: center;
+    justify-self: right;
+    margin: 0;
+    padding: 0;
+    padding-right: 2.5%;
+}
+
+.timeLeft{
+    grid-row-start: 1;
+    grid-column-start: 4;
+    align-self: center;
+    justify-self: right;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'myCustomFont';
+    color:var(--Blue500);
+}
+
+.lineBreak{
+    margin-top: 8%;
+    border: none;
+    height: 1px; /* Adjust thickness as needed */
+    padding: 0;
+    background-color: var(--Blue800);
+}
+
+.creatorInfo{
+    display:grid;
+    grid-template-columns: 32px 212px;
+    grid-template-rows: 7px 18px 7px;
+    margin-top: 1em;
+}
+
+.authorAvatar{
+    height: 2em;
+    width:auto;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    
+}
+
+.creator{
+    margin: 0;
+    margin-left: 1em;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    font-size: 14px;
+    color: var(--Blue500);
+    font-family: 'myCustomFont';
+}
+
+.creatorName{
+    grid-row-start: 2;
+    grid-row-end: 2;
+    font-size: 14px;
+    color: var(--White);
+    font-family: 'myCustomFont';
+}
+
+.creatorName:hover{
+    color:var(--Cyan400);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 650px)  {
+    body{
+         background-color: var(--Blue950);;
+    }
+
+    main{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .shadowBox{
+        box-shadow: 0px 22px 0px 18px hsla(215, 54%, 7%, 0.212);
+        border-radius: 15px;
+        width:20em;
+        padding: 2em;
+        background-color: var(--Blue900);
+    }
+}
